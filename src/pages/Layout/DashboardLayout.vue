@@ -8,7 +8,7 @@
         <md-icon>person</md-icon>
         <p>Perfil</p>
       </sidebar-link>
-      <sidebar-link to="/dashboard">
+<!--  <sidebar-link to="/dashboard">
         <md-icon>dashboard</md-icon>
         <p>Dashboard</p>
       </sidebar-link>
@@ -36,6 +36,7 @@
         <md-icon>notifications</md-icon>
         <p>Notifications</p>
       </sidebar-link>
+ -->
     </side-bar>
 
     <div class="main-panel">
