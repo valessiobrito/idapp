@@ -25,35 +25,55 @@
   <form>
     <md-card>
       <md-card-header data-background-color="gray">
-        <h4 class="title">Pedidos de Selos</h4>
+        <h4 class="title">Geral</h4>
         <p class="category"></p>
       </md-card-header>
 
       <md-card-content>
         <div class="md-layout">
-          <div class="md-layout-item md-small-size-100 md-size-100">
+          <div class="md-layout-item md-small-size-100 md-size-70">
             <md-field>
-              <label>Single</label>
-              <md-file v-model="single" />
+              <label>Documento de identidade</label>
+              <md-file v-model="identidade" />
             </md-field>
           </div>
-          <div class="md-layout-item md-small-size-100 md-size-33">
+          <div class="md-layout-item md-small-size-100 md-size-70">
             <md-field>
-              <label>Input</label>
-              <md-input v-model="code" type="number"></md-input>
+              <label>CPF</label>
+              <md-file v-model="cpf" />
+            </md-field>
+          </div>
+          <div class="md-layout-item md-small-size-100 md-size-70">
+            <md-field>
+              <label>Comprovante de residência</label>
+              <md-file v-model="residencia" />
+            </md-field>
+          </div>
+
+        <h3 class="subtitle">Experiência</h3>
+
+          <div class="md-layout-item md-small-size-100 md-size-70">
+            <md-field>
+              <label>Histórico/Currículo</label>
+              <md-file v-model="curriculo" />
+            </md-field>
+          </div>
+          <div class="md-layout-item md-small-size-100 md-size-70">
+            <md-field>
+              <label>Portfólio</label>
+              <md-file v-model="portfolio" />
             </md-field>
           </div>
           <div class="md-layout-item md-size-100">
             <md-field maxlength="5">
-              <label>Anotações</label>
-              <md-textarea v-model="anotacoes"></md-textarea>
+              <label>Experiência - Descrição longa</label>
+              <md-textarea v-model="expdesc"></md-textarea>
             </md-field>
           </div>
           <div class="md-layout-item md-size-100 text-right">
             <md-button class="md-raised md-success">Salvar</md-button>
           </div>
         </div>
-
       </md-card-content>
     </md-card>
   </form>
@@ -75,3 +95,17 @@ export default {
   }
 }
 </script>
+
+<style>
+
+.subtitle {
+   background: #CCC;
+   clear: both;
+   width: 100%;
+   padding: 0.5em;
+   color: #FFF;
+   border-radius: 5px;
+   font-size: 1.3em;
+}
+
+</style>
