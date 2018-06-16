@@ -18,8 +18,8 @@
           </div>
           <div class="md-layout-item md-small-size-100 md-size-100">
             <md-field>
-              <label>Upload</label>
-              <input type="file" id="fileinput" style="margin-top: 35px;" />
+              <label>Single</label>
+              <md-file v-model="single" />
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-33">

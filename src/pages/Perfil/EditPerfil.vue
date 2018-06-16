@@ -14,74 +14,56 @@
               <md-input v-model="nome" type="text"></md-input>
             </md-field>
           </div>
-          <div class="md-layout-item md-small-size-100 md-size-40">
+          <div class="md-layout-item md-small-size-100 md-size-50">
             <md-field>
               <label>Nome Social</label>
               <md-input v-model="nomesocial" type="text"></md-input>
             </md-field>
           </div>
-         <div class="md-layout-item md-small-size-50 md-size-40">
+         <div class="md-layout-item md-small-size-50 md-size-50">
             <md-field>
               <label>Nome Artistico</label>
               <md-input v-model="nomeartistico" type="text"></md-input>
             </md-field>
           </div>
-           <div class="md-layout-item md-small-size-50 md-size-20">
-            <md-field>
-              <label>Data</label>
-              <date-picker v-model="time1" :first-day-of-week="1" width="100%" placeholder="Data de nascimento" lang="pt-br"></date-picker>
-            </md-field>
-          </div>
-         <div class="md-layout-item md-small-size-50 md-size-33">
-            <md-field>
-              <md-list-item to="#something" class="dropdown">
-                <drop-down>
-                  <a slot="title" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="label">Raça/Cor</span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-right">
-                    <li><a href="#">Pardo</a></li>
-                    <li><a href="#">Branco</a></li>
-                    <li><a href="#">Amarelo</a></li>
-                  </ul>
-                </drop-down>
-              </md-list-item>
-            </md-field>
-          </div>
-         <div class="md-layout-item md-small-size-50 md-size-33">
-            <md-field>
-              <md-list-item to="#something" class="dropdown">
-                <drop-down>
-                  <a slot="title" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="label">Orientação sexual</span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-right">
-                    <li><a href="#">Heterossexual</a></li>
-                    <li><a href="#">Homossexual</a></li>
-                    <li><a href="#">Bissexual</a></li>
-                  </ul>
-                </drop-down>
-              </md-list-item>
-            </md-field>
-          </div>
-         <div class="md-layout-item md-small-size-50 md-size-33">
-            <md-field>
-              <md-list-item to="#something" class="dropdown">
-                <drop-down>
-                  <a slot="title" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="label">Gênero</span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-right">
-                    <li><a href="#">Homem</a></li>
-                    <li><a href="#">Mulher</a></li>
-                    <li><a href="#">Transgênero</a></li>
-                  </ul>
-                </drop-down>
-              </md-list-item>
-            </md-field>
+           <div class="md-layout-item md-small-size-50 md-size-33">
+              <md-datepicker v-model="selectedDate" lang="pt-br">
+                <label>Data de nascimento</label>
+              </md-datepicker>
           </div>
          <div class="md-layout-item md-small-size-50 md-size-50">
-              <md-checkbox v-model="acessibilidade" value="Sim">Pessoa com Deficiência ou Mobilidade Reduzida? {{ acessibilidade }}</md-checkbox>
+              <md-checkbox v-model="acessibilidade">Pessoa com Deficiência ou Mobilidade Reduzida?</md-checkbox>
+          </div>
+         <div class="md-layout-item md-small-size-50 md-size-33">
+            <!--  categorias adotadas pelo IBGE desde o Censo Demográfico de 1991: branco, preto, amarelo, pardo e indígena (Petruccelli, 2012) -->
+            <md-field>
+              <md-select v-model="etnia" name="etnia" id="etnia" placeholder="Raça/Cor">
+                <md-option value="branco">Branco</md-option>
+                <md-option value="preto">Preto</md-option>
+                <md-option value="amarelo">Amarelo</md-option>
+                <md-option value="indigena">Indígena</md-option>
+              </md-select>
+            </md-field>
+          </div>
+         <div class="md-layout-item md-small-size-50 md-size-33">
+            <md-field>
+              <md-select v-model="orientacaosexual" name="orientacaosexual" id="orientacaosexual" placeholder="Orientação Sexual">
+                <md-option value="heterossexual">Heterossexual</md-option>
+                <md-option value="homossexual">Homossexual</md-option>
+                <md-option value="bissexual">Bissexual</md-option>
+                <md-option value="intersexual">Intersexual</md-option>
+              </md-select>
+            </md-field>
+          </div>
+         <div class="md-layout-item md-small-size-50 md-size-33">
+            <md-field>
+              <md-select v-model="genero" name="genero" id="genero" placeholder="Orientação Sexual">
+                <md-option value="homem">Homem</md-option>
+                <md-option value="mulher">Mulher</md-option>
+                <md-option value="transgênero">Transgênero</md-option>
+                <md-option value="naobinario">Não binário</md-option>
+              </md-select>
+            </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-70">
             <md-field>
@@ -139,7 +121,6 @@ import DatePicker from 'vue2-datepicker'
 
 export default {
   name: 'edit-perfil',
-  components: { DatePicker },
   props: {
     dataBackgroundColor: {
       type: String,
@@ -152,6 +133,8 @@ export default {
       disabled: null,
       emailadress: null,
       code: null,
+      estado: "DF",
+      cidade: "Brasília",
       anotacoes: null
     }
   }

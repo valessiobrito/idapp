@@ -11,7 +11,6 @@ import routes from './routes/routes'
 import GlobalComponents from './globalComponents'
 import GlobalDirectives from './globalDirectives'
 import Notifications from './components/NotificationPlugin'
-import Vue2FileUpload from 'vue2-file-upload'
 
 // MaterialDashboard plugin
 import MaterialDashboard from './material-dashboard'
@@ -29,7 +28,6 @@ Vue.use(MaterialDashboard)
 Vue.use(GlobalComponents)
 Vue.use(GlobalDirectives)
 Vue.use(Notifications)
-Vue.use(Vue2FileUpload)
 
 // global library setup
 Object.defineProperty(Vue.prototype, '$Chartist', {
