@@ -2,6 +2,26 @@
   <div class="content">
     <div class="md-layout">
       <div class="md-layout-item md-medium-size-100 md-size-66">
+ <md-card>
+      <md-card-header data-background-color="gray">
+        <h4 class="title">Pedidos de Selos</h4>
+        <p class="category"></p>
+      </md-card-header>
+      <md-card-content>
+       <div class="md-layout">
+        <div class="md-layout-item md-small-size-50 md-size-33">
+              <md-checkbox v-model="ceac">CEAC</md-checkbox>
+        </div>
+        <div class="md-layout-item md-small-size-50 md-size-33">
+              <md-checkbox v-model="pcap">CAP</md-checkbox>
+        </div>
+        <div class="md-layout-item md-small-size-50 md-size-33">
+              <md-checkbox v-model="pcultura">Ponto de cultura</md-checkbox>
+        </div>
+        </div>
+      </md-card-content>
+ </md-card>
+
   <form>
     <md-card>
       <md-card-header data-background-color="gray">
@@ -11,11 +31,6 @@
 
       <md-card-content>
         <div class="md-layout">
-         <div class="md-layout-item md-small-size-50 md-size-50">
-              <md-checkbox v-model="ceac">CEAC</md-checkbox>
-              <md-checkbox v-model="pcap">CAP</md-checkbox>
-              <md-checkbox v-model="pcultura">Ponto de cultura</md-checkbox>
-          </div>
           <div class="md-layout-item md-small-size-100 md-size-100">
             <md-field>
               <label>Single</label>
@@ -51,6 +66,9 @@
 export default {
   data () {
     return {
+      ceac: false,
+      pcap: false,
+      pcultura: false
     }
   },
   methods: {
