@@ -141,5 +141,6 @@ export default {
 
 </script>
 <style>
-
+.md-datepicker-header { display: none; }
+.md-list-item-text { padding: 1em; }
 </style>
