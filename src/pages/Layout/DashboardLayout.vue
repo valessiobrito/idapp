@@ -16,11 +16,11 @@
         <md-icon>location_on</md-icon>
         <p>Endereços</p>
       </sidebar-link>
-<!--  <sidebar-link to="/dashboard">
-        <md-icon>dashboard</md-icon>
-        <p>Dashboard</p>
+      <sidebar-link to="/aprovacoes">
+        <md-icon>offline_pin</md-icon>
+        <p>Aprovações</p>
       </sidebar-link>
-      <sidebar-link to="/user">
+<!--      <sidebar-link to="/user">
         <md-icon>person</md-icon>
         <p>User Profile</p>
       </sidebar-link>

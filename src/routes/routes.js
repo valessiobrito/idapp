@@ -3,7 +3,7 @@ import DashboardLayout from '@/pages/Layout/DashboardLayout.vue'
 import Perfil from '@/pages/Perfil.vue'
 import Documents from '@/pages/Documents.vue'
 import Enderecos from '@/pages/Enderecos.vue'
-import TableList from '@/pages/TableList.vue'
+import Aprovacoes from '@/pages/Aprovacoes.vue'
 import Typography from '@/pages/Typography.vue'
 import Icons from '@/pages/Icons.vue'
 import Maps from '@/pages/Maps.vue'
@@ -31,9 +31,9 @@ const routes = [
         component: Enderecos
       },
       {
-        path: 'table',
-        name: 'Table List',
-        component: TableList
+        path: 'aprovacoes',
+        name: 'Aprovações',
+        component: Aprovacoes
       },
       {
         path: 'typography',
