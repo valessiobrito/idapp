@@ -8,6 +8,10 @@
         <md-icon>person</md-icon>
         <p>Perfil</p>
       </sidebar-link>
+      <sidebar-link to="/documentos">
+        <md-icon>library_books</md-icon>
+        <p>Documentos</p>
+      </sidebar-link>
 <!--  <sidebar-link to="/dashboard">
         <md-icon>dashboard</md-icon>
         <p>Dashboard</p>
