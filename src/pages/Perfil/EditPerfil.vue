@@ -117,7 +117,6 @@
   </form>
 </template>
 <script>
-import DatePicker from 'vue2-datepicker'
 
 export default {
   name: 'edit-perfil',
@@ -133,8 +132,8 @@ export default {
       disabled: null,
       emailadress: null,
       code: null,
-      estado: "DF",
-      cidade: "Brasília",
+      estado: 'DF',
+      cidade: 'Brasília',
       anotacoes: null
     }
   }
