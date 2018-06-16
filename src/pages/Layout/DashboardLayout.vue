@@ -12,6 +12,10 @@
         <md-icon>library_books</md-icon>
         <p>Documentos</p>
       </sidebar-link>
+      <sidebar-link to="/enderecos">
+        <md-icon>location_on</md-icon>
+        <p>Endereços</p>
+      </sidebar-link>
 <!--  <sidebar-link to="/dashboard">
         <md-icon>dashboard</md-icon>
         <p>Dashboard</p>

@@ -2,8 +2,7 @@ import DashboardLayout from '@/pages/Layout/DashboardLayout.vue'
 
 import Perfil from '@/pages/Perfil.vue'
 import Documents from '@/pages/Documents.vue'
-import Dashboard from '@/pages/Dashboard.vue'
-import UserProfile from '@/pages/UserProfile.vue'
+import Enderecos from '@/pages/Enderecos.vue'
 import TableList from '@/pages/TableList.vue'
 import Typography from '@/pages/Typography.vue'
 import Icons from '@/pages/Icons.vue'
@@ -27,9 +26,9 @@ const routes = [
         component: Documents
       },
       {
-        path: 'user',
-        name: 'User Profile',
-        component: UserProfile
+        path: 'enderecos',
+        name: 'Endereços',
+        component: Enderecos
       },
       {
         path: 'table',
