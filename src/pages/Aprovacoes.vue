@@ -70,6 +70,9 @@
 export default {
   data () {
     return {
+      valid1: true,
+      valid2: false,
+      valid3: false
     }
   },
   methods: {
