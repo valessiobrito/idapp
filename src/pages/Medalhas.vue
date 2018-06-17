@@ -109,7 +109,7 @@ export default {
 .selo-pendente .stats-medalha {
    background: red;
 }
- 
+
 .selo-pendente h4 {
    color: red;
 }
