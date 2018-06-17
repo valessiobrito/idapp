@@ -175,8 +175,7 @@ export default{
 }
 
 .md-ripple > span {
-    margin-left: 56px;
-    line-height: 50px;
+    margin-left: 40px;
 }
 
 ul.ul-primeiro {
